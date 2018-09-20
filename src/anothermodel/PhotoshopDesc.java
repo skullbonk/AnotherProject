@@ -2,9 +2,9 @@ package anothermodel;
 
 public class PhotoshopDesc
 {
-	private String target;
-	private int length;
+	private int height;
 	private int width;
+	//private String target;
 	private String request; 
 	//private boolean face;
 	
@@ -37,11 +37,11 @@ public class PhotoshopDesc
 	 */
 	
 	
-	public PhotoshopDesc(String target, int length, int width, String request)
+	public PhotoshopDesc(int length, int height, String request)
 	{
 		this.target = target;
 		this.length = length;
-		this.width = width;
+		this.height = height;
 		this.request = request;
 		//this.face = face;
 				
