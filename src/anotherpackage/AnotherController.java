@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
 public class AnotherController
 {
 	
-	private PhotoshopDesc request;
+	private PhotoshopDesc commission;
 	
 	public AnotherController()
 	{
-		request = new PhotoshopDesc();
+		commission = new PhotoshopDesc();
 	}
 	
 	
@@ -28,7 +28,7 @@ public class AnotherController
 		{
 			inputWidth = Integer.parseInt(input);
 		}
-		request.setWidth(inputWidth);
+		commission.setWidth(inputWidth);
 		
 		input = JOptionPane.showInputDialog(null, "And what is the height of your image, in pixels?");
 		int inputHeight = 1080;
@@ -36,12 +36,63 @@ public class AnotherController
 		{
 			inputHeight = Integer.parseInt(input);
 		}
+		commission.setHeight(inputHeight);
 		
-				
-		input = JOptionPane.showInputDialog(null, "Describe the changes you want made.");
+		boolean isSerious = false;
+		input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate photoshop? Like where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
+		isSerious = Boolean.parseBoolean(input); 
+		commission.setSerious(isSerious);
+		
+		if(!commission.getSerious())
+		{
+			String inputRequest = "default";		
+			input = JOptionPane.showInputDialog(null, "Describe the changes you'd like to have made.");
+			inputRequest = input;
+			commission.setRequest(inputRequest);
+		}
+		
+		if(commission.getSerious())
+		{
+			String inputSeriousRequest = "default";
+			input = JOptionPane.showInputDialog(null, "Describe the changes you'd like to have made to your serious image.");
+			inputSeriousRequest = input;
+			commission.setSeriousRequest(inputSeriousRequest);
+		}
+		
+		JOptionPane.showMessageDialog(null, "Excellent, your request is now being processed.");
+		
+		int loading = 0;
+		boolean complete = false;
+		
+		while(!complete)
+		{
+			System.out.println("Loading: " + loading + "%");
+			loading += 1;
+			if(loading == 100)
+			{
+				complete = true;
+			}
+		}
+		
+		if(complete = true)
+		{
+			JOptionPane.showMessageDialog(null, "Processing is complete. Have an [adjective] day.");
+		}
+		
+		
 		
 		
 	}
+	
+//	private void lop()
+//	{
+//					define a variable before the loop
+//		boolean done = false;
+//		while (!done)
+//		{
+//			System.out.println("Time for words.");
+//		}
+//	}
 	
 	
 	public boolean validInt(String input)
