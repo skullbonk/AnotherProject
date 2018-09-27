@@ -46,11 +46,19 @@ public class AnotherController
 		commission.setHeight(inputHeight);
 		
 		
-		
+	
 		boolean isSerious = false;
-		input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate photoshop? Like where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
-		isSerious = Boolean.parseBoolean(input); 
+		int answered = 0;
+		
+		while(answered == 0)
+		{
+			input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate shop? Like, where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
+			//input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate shop? Like, where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
+			answered = 1;
+		}
+		isSerious = Boolean.parseBoolean(input);
 		commission.setSerious(isSerious);
+		
 		
 		if(!commission.getSerious())
 		{
@@ -60,6 +68,7 @@ public class AnotherController
 			commission.setRequest(inputRequest);
 		}
 		
+		
 		if(commission.getSerious())
 		{
 			String inputSeriousRequest = "default";
@@ -68,8 +77,19 @@ public class AnotherController
 			commission.setSeriousRequest(inputSeriousRequest);
 		}
 		
+	
+		
+		
 		JOptionPane.showMessageDialog(null, "Excellent, your request is now being processed.");
 		
+		
+		public String toString()
+		{
+			String desc = ""
+		}
+		
+		
+		/*
 		int loading = 0;
 		boolean complete = false;
 		
@@ -82,26 +102,20 @@ public class AnotherController
 				complete = true;
 			}
 		}
-		
-		//if(complete = true)
-		//{
-			JOptionPane.showMessageDialog(null, "Processing is complete. Have a [adjective] day.");
-		//}
-		
-		
-		
+		*/
+
+		JOptionPane.showMessageDialog(null, "Processing is complete. Have a [adjective] day.");
+
+			
 		
 	}
 	
-//	private void lop()
-//	{
-//					define a variable before the loop
-//		boolean done = false;
-//		while (!done)
-//		{
-//			System.out.println("Time for words.");
-//		}
-//	}
+
+	
+
+	
+	
+	
 	
 	
 	public boolean validInt(String input)
