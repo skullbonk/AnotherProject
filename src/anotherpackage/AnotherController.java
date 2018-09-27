@@ -53,7 +53,6 @@ public class AnotherController
 		while(answered == 0)
 		{
 			input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate shop? Like, where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
-			//input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate shop? Like, where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
 			answered = 1;
 		}
 		isSerious = Boolean.parseBoolean(input);
@@ -83,11 +82,6 @@ public class AnotherController
 		JOptionPane.showMessageDialog(null, "Excellent, your request is now being processed.");
 		
 		
-		public String toString()
-		{
-			String desc = ""
-		}
-		
 		
 		/*
 		int loading = 0;
@@ -110,8 +104,8 @@ public class AnotherController
 		
 	}
 	
-
 	
+
 
 	
 	

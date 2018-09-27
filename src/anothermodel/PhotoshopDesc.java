@@ -6,13 +6,10 @@ public class PhotoshopDesc
 {
 	private int height;
 	private int width;
-	//private String target;
 	private boolean serious;
 	private String seriousRequest;
 	private String request; 
-	//private boolean face;
-	
-	
+
 	
 	
 	
@@ -49,6 +46,26 @@ public class PhotoshopDesc
 	}
 	
 	
+	
+	public String toString()
+	{
+		String desc = "Here is your request ";
+		if(serious == false)
+		{
+			desc += " Your request was 'Non-serious' ";
+			desc += " Request: '" + request + "' ";
+			desc += " Width: " + width;
+			desc += " Height: " + height;
+		}
+		if(serious == true)
+		{
+			desc += " Your request was 'Serious' ";
+			desc += " Request: '" + seriousRequest + "'";
+			desc += " Width: " + width;
+			desc += " Height: " + height;
+		}
+		return desc;
+	}
 	
 	
 	//    Welcome to getter village
