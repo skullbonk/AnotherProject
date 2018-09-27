@@ -19,8 +19,13 @@ public class AnotherController
 	}
 	
 	
-	
 	public void start()
+	{
+		questions();
+	}
+	
+	
+	public void questions()
 	{
 		
 		int inputWidth = 1920;
@@ -80,6 +85,9 @@ public class AnotherController
 		
 		
 		JOptionPane.showMessageDialog(null, "Excellent, your request is now being processed.");
+		
+		
+		JOptionPane.showMessageDialog(null, toString());
 		
 		
 		
