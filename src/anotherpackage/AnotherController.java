@@ -22,21 +22,30 @@ public class AnotherController
 	
 	public void start()
 	{
-		String input = JOptionPane.showInputDialog(null, "What is the width, in pixels, of your image?");
+		
 		int inputWidth = 1920;
-		if(validInt(input))
+		String input = JOptionPane.showInputDialog(null, "What is the width, in pixels, of your image?");
+		while(!validInt(input))
 		{
-			inputWidth = Integer.parseInt(input);
+			input = JOptionPane.showInputDialog(null, "Type some danging numbers.");
 		}
+		
+		inputWidth = Integer.parseInt(input);
 		commission.setWidth(inputWidth);
+		
+		
 		
 		input = JOptionPane.showInputDialog(null, "And what is the height of your image, in pixels?");
 		int inputHeight = 1080;
-		if(validInt(input))
+		while(!validInt(input))
 		{
-			inputHeight = Integer.parseInt(input);
+			input = JOptionPane.showInputDialog(null, "Type another goshing number.");
 		}
+		
+		inputHeight = Integer.parseInt(input);
 		commission.setHeight(inputHeight);
+		
+		
 		
 		boolean isSerious = false;
 		input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate photoshop? Like where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
@@ -66,7 +75,7 @@ public class AnotherController
 		
 		while(!complete)
 		{
-			System.out.println("Loading: " + loading + "%");
+			JOptionPane.showMessageDialog(null, "Loading: " + loading + "%");
 			loading += 1;
 			if(loading == 100)
 			{
@@ -74,10 +83,10 @@ public class AnotherController
 			}
 		}
 		
-		if(complete = true)
-		{
-			JOptionPane.showMessageDialog(null, "Processing is complete. Have an [adjective] day.");
-		}
+		//if(complete = true)
+		//{
+			JOptionPane.showMessageDialog(null, "Processing is complete. Have a [adjective] day.");
+		//}
 		
 		
 		
