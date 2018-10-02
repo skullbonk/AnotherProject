@@ -1,5 +1,6 @@
 package anotherpackage;
 import anothermodel.PhotoshopDesc;
+import anothermodel.LoopyPooper;
 
 /**
  * Now you have gui, you're welcome
@@ -12,9 +13,13 @@ public class AnotherController
 {
 	
 	private PhotoshopDesc commission;
+	private LoopyPooper loopy;
+	
+	
 	
 	public AnotherController()
 	{
+		loopy = new LoopyPooper();
 		commission = new PhotoshopDesc();
 	}
 	
@@ -50,19 +55,17 @@ public class AnotherController
 		inputHeight = Integer.parseInt(input);
 		commission.setHeight(inputHeight);
 		
-		
+		// Pointless while zone
 	
 		boolean isSerious = false;
 		int answered = 0;
-		
 		while(answered == 0)
 		{
 			input = JOptionPane.showInputDialog(null, "Is this a serious, legitimate shop? Like, where you want to actually touch up an image? If so, type 'true'. If you want a friend's eyebrows removed or something silly like that, type 'false'.");
-			answered = 1;
+			answered = 1;	
 		}
 		isSerious = Boolean.parseBoolean(input);
 		commission.setSerious(isSerious);
-		
 		
 		if(!commission.getSerious())
 		{
@@ -71,7 +74,6 @@ public class AnotherController
 			inputRequest = input;
 			commission.setRequest(inputRequest);
 		}
-		
 		
 		if(commission.getSerious())
 		{
@@ -82,6 +84,7 @@ public class AnotherController
 		}
 		
 	
+		
 		
 		
 		JOptionPane.showMessageDialog(null, "Excellent, your request is now being processed.");
@@ -118,43 +121,40 @@ public class AnotherController
 	
 	
 	
-	
-	
-	public boolean validInt(String input)
-	{
-		boolean isValid = false;
-		
-		try
+	//public void valids()
+	//{
+		public boolean validInt(String input)
 		{
-			Integer.parseInt(input);
-			isValid = true;
-		}
-		catch (NumberFormatException error)
-		{
-			JOptionPane.showMessageDialog(null, "You fricked it up dingus. Try typing in a number. A whole number. And don't type it out, smart boy.");
-		}
-		
-		return isValid;
-	}
-	
-	public boolean validDouble(String mightBeDouble)
-	{
-		boolean isValid = false;
-		
-		try
-		{
-			Double.parseDouble(mightBeDouble);
-			isValid = true;
-		}
+			boolean isValid = false;
+			
+			try
+			{
+				Integer.parseInt(input);
+				isValid = true;
+			}
 			catch (NumberFormatException error)
-		{
-			JOptionPane.showMessageDialog(null, "Type in a dang decimal you dorito");
+			{
+				JOptionPane.showMessageDialog(null, "You fricked it up dingus. Try typing in a number. A whole number. And don't type it out, smart boy.");
+			}
+			
+			return isValid;
 		}
-	
-		return isValid;
-	}
-	
-	
-	
-
+		
+		public boolean validDouble(String mightBeDouble)
+		{
+			boolean isValid = false;
+			
+			try
+			{
+				Double.parseDouble(mightBeDouble);
+				isValid = true;
+			}
+			catch (NumberFormatException error)
+			{
+				JOptionPane.showMessageDialog(null, "Type in a dang decimal you dorito");
+			}
+			
+			return isValid;
+		}
+	//}
 }
