@@ -2,6 +2,7 @@ package anothermodel;
 
 import javax.swing.JOptionPane;
 
+
 public class PhotoshopDesc
 {
 	private int height;

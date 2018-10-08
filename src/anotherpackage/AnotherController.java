@@ -1,4 +1,5 @@
 package anotherpackage;
+import java.util.ArrayList;
 import anothermodel.PhotoshopDesc;
 import anothermodel.LoopyPooper;
 
@@ -115,14 +116,43 @@ public class AnotherController
 		
 	}
 	
+	// This is a thing that almost makes sense, but definitely won't do anything other than break stuff. So it's commented out.
 	
+	/*
+	public void array()
+	{
+		ArrayList<Requests> myRequests = new ArrayList<Requests>();
+		
+		Bun sampleBun = new Bun();
+		Bun otherBun = new ();
+		
+		myBuns.add(sampleBun);
+		myBuns.add(sampleBun);
+		myBuns.add(otherBun);
+		
+		// Standard forward loop
+		for (int index = 0; index < myBuns.size(); index += 1) 
+		{
+			
+		}
+		
+		// Standard backward loop
+		for (int index = myBuns.size() - 1; index >= 0; index -= 1)
+		{
+			
+		}
+		
+		for (Bun latest : PhotoshopDesc.getRequest());
+		{
+			JOptionPane.showMessageDialog(null, "This bun is named " + ());
+		}
+		
+		
+	}
+	*/
 
 
 	
-	
-	
-	//public void valids()
-	//{
 		public boolean validInt(String input)
 		{
 			boolean isValid = false;
