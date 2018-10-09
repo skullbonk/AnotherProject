@@ -1,6 +1,8 @@
 package anothermodel;
 
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
+
 
 
 public class PhotoshopDesc
@@ -20,12 +22,14 @@ public class PhotoshopDesc
 	 * Initializes all values to valid but not really useful values
 	 * Used for later customization.
 	 */
-	
-	
-	
 	public PhotoshopDesc()
 	{
 	
+		
+	}
+	
+	public ArrayList<butts> = new ArrayList <butts>();
+	{
 		
 	}
 	
