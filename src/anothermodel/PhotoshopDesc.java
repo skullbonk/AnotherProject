@@ -18,7 +18,7 @@ public class PhotoshopDesc
 	
 	
 	/**
-	 * Default constructor for a PhotosopDesc
+	 * Default constructor for a PhotoshopDesc
 	 * Initializes all values to valid but not really useful values.
 	 * Used for later customization.
 	 */
@@ -54,7 +54,9 @@ public class PhotoshopDesc
 	}
 	
 	
-	
+	/**
+	 * Relays the completed request to the user.
+	 */
 	public String toString()
 	{
 		String desc = "Here is your request ";
@@ -156,11 +158,19 @@ public class PhotoshopDesc
 		this.request = request;
 	}
 	
+	/**
+	 * 
+	 * @param serious Whether or not the request is a serious one.
+	 */
 	public void setSerious(boolean serious)
 	{
 		this.serious = serious;
 	}
 	
+	/**
+	 * 
+	 * @param seriousRequest The serious request itself.
+	 */
 	public void setSeriousRequest(String seriousRequest)
 	{
 		this.seriousRequest = seriousRequest;
