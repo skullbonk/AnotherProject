@@ -29,12 +29,7 @@ public class PhotoshopDesc
 	}
 	
 	
-	/*	
-	public ArrayList<butts> = new ArrayList <butts>();
-	{
-		
-	}
- 	*/	
+
 	
 	
 	/**
