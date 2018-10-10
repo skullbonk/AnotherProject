@@ -19,7 +19,7 @@ public class PhotoshopDesc
 	
 	/**
 	 * Default constructor for a PhotosopDesc
-	 * Initializes all values to valid but not really useful values
+	 * Initializes all values to valid but not really useful values.
 	 * Used for later customization.
 	 */
 	public PhotoshopDesc()
@@ -28,19 +28,22 @@ public class PhotoshopDesc
 		
 	}
 	
+	
+	/*	
 	public ArrayList<butts> = new ArrayList <butts>();
 	{
 		
 	}
+ 	*/	
+	
 	
 	/**
-	 * Initializes PhotoshopDesc but with actual info
-	 * @param height The height of the final image, in pixels
-	 * @param width The width of the final image, in pixels
-	 * @param request A description of the changes to be made
+	 * Initializes PhotoshopDesc, but with actual info.
+	 * @param height The height of the final image, in pixels.
+	 * @param width The width of the final image, in pixels.
+	 * @param serious Whether or not the request is serious.
+	 * @param request A description of the changes to be made.
 	 */
-	
-	
 	public PhotoshopDesc(int width, int height, boolean serious, String seriousRequest, String request)
 	{	
 		this.width = width;
@@ -75,27 +78,45 @@ public class PhotoshopDesc
 	
 	//    Welcome to getter village
 	
-
+	/**
+	 * @return The width of the image.
+	 */
 	public int getWidth()
 	{
 		return width;
 	}
 	
+	/**
+	 * 
+	 * @return The height of the image.
+	 */
 	public int getHeight()
 	{
 		return height;
 	}	
 	
+	/**
+	 * 
+	 * @return Whether the request is serious or not.
+	 */
 	public boolean getSerious()
 	{
 		return serious;
 	}
 	
+	/**
+	 * 
+	 * @return The serious variant of the request.
+	 */
 	public String getSeriousRequest()
 	{
 		return seriousRequest;
 	}
 	
+	/**
+	 * 
+	 * @return The request itself.
+	 */
 	public String getRequest()
 	{
 		return request;
@@ -108,17 +129,28 @@ public class PhotoshopDesc
 	
 	//    Now entering the setterscape
 	
+	/**
+	 * 
+	 * @param width The width of the image.
+	 */
 	public void setWidth(int width)
 	{
 		this.width = width;
 	}
 
+	/**
+	 * 
+	 * @param height The height of the image.
+	 */
 	public void setHeight(int height)
 	{
 		this.height = height;
 	}
 	
-	
+	/**
+	 * 
+	 * @param request The request itself.
+	 */
 	public void setRequest(String request)
 	{
 		this.request = request;

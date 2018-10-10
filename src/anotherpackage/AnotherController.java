@@ -30,7 +30,9 @@ public class AnotherController
 		questions();
 	}
 	
-	
+	/**
+	 *	This asks a series of questions to determine the nature of the request. 
+	 */
 	public void questions()
 	{
 		
